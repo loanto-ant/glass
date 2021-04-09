@@ -1,0 +1,227 @@
+/*Irgendwie Alles*/
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    
+    background-size: initial;
+    background-image: linear-gradient(#019D94, #073C54);
+    background-attachment: fixed;
+}
+.allesinhalt{
+    position: absolute;
+    top: 40vh;
+    left: 5vw;
+    height: 100vh;
+    letter-spacing: 1.0px;
+}
+.title h1{
+    color: white;
+    font-size: 50px;
+    font-family: 'Raleway', sans-serif;
+}
+.title p{
+    color: white;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+.title button{
+    color: white;
+    background-color: transparent;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 7px;
+}
+.title button:hover{
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+.nav a{
+    color: white;
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px;
+    margin: 20px;
+    border-bottom: 4px hidden white;
+    letter-spacing: 1.2px;
+}
+.nav{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    top: 3vh;
+    right: 5vw;
+}
+.nav a:hover{
+    border-bottom: 2px solid white;
+    
+}
+.content{
+    position: relative;
+    top: 50vh;
+}
+.content h2{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    padding: 20px;
+}
+.footer{
+    position: relative;
+    height: 50px;
+    
+}
+.footer img{
+    height: 50px;
+    position: absolute;
+    right: 0px;
+    bottom: 5px;
+}
+/*Mobile, Status:Funktioniert nicht*/
+@media only screen and (max-width:552px){
+    .song-einzeln{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .song-einzeln img{
+        width: 140px;
+        max-width: 140px;
+        position: relative;
+        left: 80px;
+        top: 100%;
+        transform: none;
+        border-radius: 30px;
+    }
+
+}
+
+/*Songs*/
+
+.song-einzeln{
+    background-color: rgba(255, 255, 255, 0.29);
+    border-radius: 40px;
+    padding: 25px;
+    position: relative;
+    height: 140px;
+    width: 450px;
+    margin-bottom: 25px;
+}
+.song-einzeln img{
+    width: 140px;
+    max-width: 140px;
+    position: absolute;
+    right: 20px ;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 30px;
+}
+.song-einzeln h3{
+    color: white;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+}
+.song-einzeln audio{
+    margin-top: 16.5px;
+}
+.youtube, .soundcloud{
+    color: white;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    margin-right: 30px;
+}
+.youtube:hover{
+    border-bottom: 2px solid red;
+}
+.soundcloud:hover{
+    border-bottom: 2px solid #FF5419;
+}
+.songs-gesamt{
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*Social Media*/
+
+.dienste-gesamt{
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.dienst-einzeln{
+    background-color: rgba(255, 255, 255, 0.29);
+    border-radius: 40px;
+    padding: 15px;
+    position: relative;
+    height: 20vh;
+    margin-bottom: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.dienst-einzeln img{
+    height: 20vh;
+}
+.dienst-einzeln:hover{
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+/*Info*/
+
+.entstehung-absatz{
+    color: white;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgba(255, 255, 255, 0.29);
+    border-radius: 40px;
+    padding: 15px;
+    width: 80vw;
+    margin-bottom: 25px;
+}
+
+.tool-einzeln{
+    background-color: rgba(255, 255, 255, 0.29);
+    border-radius: 40px;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.tool-einzeln h3{
+    color: white;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
+.tool-einzeln a{
+    text-decoration: none;
+}
+.tool-einzeln h3:hover{
+    text-decoration: underline solid white;
+}
+.tool-einzeln p{
+    color: white;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+.tool-einzeln img{
+    width: 300px;
+    margin: 15px;
+}
+.tool-text{
+    margin: 15px;
+}
