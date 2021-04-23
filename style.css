@@ -31,25 +31,35 @@ body{
 }
 .title button{
     color: white;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.2);
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
-    border: 2px solid white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 3px solid rgba(255, 255, 255, 0);
     border-radius: 50px;
     padding: 7px;
+    transition: border 0.3s;
 }
 .title button:hover{
-    border: 2px solid rgba(255, 255, 255, 0);
+    border: 3px solid rgba(255, 255, 255, 0.5);
+}
+.title button:focus{
+    outline: none;
 }
 .nav a{
     color: white;
     font-family: "Raleway", sans-serif;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 18px;
     padding: 8px;
     margin: 20px;
-    border-bottom: 4px hidden white;
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
     letter-spacing: 1.2px;
+    transition: border-bottom 0.6s;
+}
+.nav a:hover{
+    border-bottom: 3px solid white;
 }
 .nav{
     position: absolute;
@@ -58,10 +68,6 @@ body{
     flex-wrap: wrap;
     top: 3vh;
     right: 5vw;
-}
-.nav a:hover{
-    border-bottom: 2px solid white;
-    
 }
 .content{
     position: relative;
@@ -106,13 +112,14 @@ body{
 /*Songs*/
 
 .song-einzeln{
-    background-color: rgba(255, 255, 255, 0.29);
+    background-image: linear-gradient(to right bottom,rgba(255, 255, 255, 0.29), rgba(255, 255, 255, 0.4)) ;
     border-radius: 40px;
     padding: 25px;
     position: relative;
     height: 140px;
     width: 450px;
     margin-bottom: 25px;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.25);
 }
 .song-einzeln img{
     width: 140px;
@@ -131,6 +138,10 @@ body{
 }
 .song-einzeln audio{
     margin-top: 16.5px;
+    border-radius: 30px;
+}
+.song-einzeln audio:focus{
+    outline: none;
 }
 .youtube, .soundcloud{
     color: white;
@@ -161,7 +172,7 @@ body{
     flex-wrap: wrap;
 }
 .dienst-einzeln{
-    background-color: rgba(255, 255, 255, 0.29);
+    background-color: rgba(255, 255, 255, 0.25);
     border-radius: 40px;
     padding: 15px;
     position: relative;
@@ -169,16 +180,21 @@ body{
     margin-bottom: 25px;
     margin-left: 5px;
     margin-right: 5px;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.25);
+    transition: background-color 0.2s;
+}
+.dienst-einzeln:hover{
+    background-color: rgba(255, 255, 255, 0.38);
 }
 .dienst-einzeln img{
     height: 20vh;
 }
-.dienst-einzeln:hover{
-    background-color: rgba(255, 255, 255, 0.35);
-}
 
 /*Info*/
 
+.entstehung-gesamt, tools-gesamt{
+    width: 90vw;
+}
 .entstehung-absatz{
     color: white;
     font-size: 20px;
@@ -186,20 +202,22 @@ body{
     background-color: rgba(255, 255, 255, 0.29);
     border-radius: 40px;
     padding: 15px;
-    width: 80vw;
+    width: 85vw;
     margin-bottom: 25px;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.25);
 }
 
 .tool-einzeln{
     background-color: rgba(255, 255, 255, 0.29);
     border-radius: 40px;
-    width: 80vw;
+    width: 85vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 15px;
     padding-right: 15px;
-
+    flex-wrap: wrap;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.25);
 }
 .tool-einzeln h3{
     color: white;
@@ -220,7 +238,7 @@ body{
 }
 .tool-einzeln img{
     width: 300px;
-    margin: 15px;
+    margin: 15px 5px 15px 5px;
 }
 .tool-text{
     margin: 15px;
