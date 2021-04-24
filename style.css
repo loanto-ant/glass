@@ -90,24 +90,6 @@ body{
     right: 0px;
     bottom: 5px;
 }
-/*Mobile, Status:Funktioniert nicht*/
-@media only screen and (max-width:552px){
-    .song-einzeln{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .song-einzeln img{
-        width: 140px;
-        max-width: 140px;
-        position: relative;
-        left: 80px;
-        top: 100%;
-        transform: none;
-        border-radius: 30px;
-    }
-
-}
 
 /*Songs*/
 
@@ -123,7 +105,6 @@ body{
 }
 .song-einzeln img{
     width: 140px;
-    max-width: 140px;
     position: absolute;
     right: 20px ;
     top: 50%;
@@ -242,4 +223,34 @@ body{
 }
 .tool-text{
     margin: 15px;
+}
+
+/*Mobile-Songs*/
+@media (max-width: 545px){
+    .songs-gesamt{
+        justify-content: center;
+    }
+    .song-einzeln{
+        height: 325px;
+        max-width: 300px;
+        padding: 18px;
+    }
+    .song-einzeln h3{
+        text-align: center;
+    }
+    .song-einzeln audio{
+        position: relative;
+        bottom: -208px;
+        width: 300px;
+        height: 54px;
+    }
+    .song-einzeln img{
+        left: 50%;
+        top: 168px;
+        transform: translate(-50%, -50%);
+        width: 225px;
+    }
+    .youtube, .soundcloud{
+        display: none;
+    }
 }
