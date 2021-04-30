@@ -21,9 +21,14 @@
     --background-image: linear-gradient( to right bottom, rgba(66, 66, 66, 0.29), rgba(44, 44, 44, 0.4)) ;
     --background-image-hover: linear-gradient( to right bottom, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.52)) ;
 }
-body{
+html, body{
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+body{
     background-size: cover;
     background-image: linear-gradient(#00c2ae, #08314D);
     background-attachment: fixed;
@@ -116,7 +121,7 @@ body{
     width: 90vw;
 }
 .splash{
-    height: 110vh;
+    height: 100vh;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
