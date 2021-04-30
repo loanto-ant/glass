@@ -3,12 +3,29 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    font-family: 'Raleway', sans-serif;
+}
+:root{
+    --blur: 10px;
+    --font-color: white;
+    --font-color-box: rgb(255, 255, 255);
+    --shadow: 6px 6px 20px rgba(122, 122, 122, 0.25);
+    /* WHITE
+    --background-color: rgba(255, 255, 255, 0.29);
+    --background-color-hover: rgba(255, 255, 255, 0.50) ;
+    --background-image: linear-gradient( to right bottom, rgba(255, 255, 255, 0.29), rgba(255, 255, 255, 0.40)) ;
+    --background-image-hover: linear-gradient( to right bottom, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.52)) ;
+    */
+    --background-color: rgba(0, 0, 0, 0.29);
+    --background-color-hover: rgba(0, 0, 0, 0.5) ;
+    --background-image: linear-gradient( to right bottom, rgba(66, 66, 66, 0.29), rgba(44, 44, 44, 0.4)) ;
+    --background-image-hover: linear-gradient( to right bottom, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.52)) ;
 }
 body{
     width: 100%;
     height: 100vh;
-    background-size: auto;
-    background-image: linear-gradient(#019D94, #073C54);
+    background-size: cover;
+    background-image: linear-gradient(#00c2ae, #08314D);
     background-attachment: fixed;
 }
 .allesinhalt{
@@ -19,26 +36,24 @@ body{
     letter-spacing: 1.0px;
 }
 .title h1{
-    color: white;
+    color: var(--font-color);
     font-size: 50px;
-    font-family: 'Raleway', sans-serif;
 }
 .title p{
-    color: white;
+    color: var(--font-color);
     font-size: 20px;
-    font-family: 'Raleway', sans-serif;
 }
 .title button{
-    color: white;
+    color: var(--font-color);
     background-color: rgba(255, 255, 255, 0.2);
     font-size: 20px;
-    font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     border: 3px solid rgba(255, 255, 255, 0);
     border-radius: 50px;
     padding: 7px;
     transition: border 0.3s;
+    backdrop-filter: blur(var(--blur));
 }
 .title button:hover{
     border: 3px solid rgba(255, 255, 255, 0.5);
@@ -47,7 +62,7 @@ body{
     outline: none;
 }
 .nav a{
-    color: white;
+    color: var(--font-color);
     font-family: "Raleway", sans-serif;
     text-decoration: none;
     font-size: 18px;
@@ -58,7 +73,10 @@ body{
     transition: border-bottom 0.3s;
 }
 .nav a:hover{
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid var(--font-color);
+}
+.nav a:focus{
+    outline: none;
 }
 .nav{
     position: absolute;
@@ -73,34 +91,61 @@ body{
     top: 50vh;
 }
 .content h2{
-    color: white;
-    font-family: 'Raleway', sans-serif;
+    color: var(--font-color);
     font-size: 30px;
     padding: 20px;
 }
 .footer{
     position: relative;
-    height: 50px;
-    
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .footer img{
     height: 50px;
+}
+.footer a{
+    color: var(--font-color);
+    text-decoration: none;
+    font-size: 15px;
+}
+#footer-index{
     position: absolute;
-    right: 0px;
-    bottom: 5px;
+    bottom: 0px;
+    width: 90vw;
+}
+.splash{
+    height: 110vh;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.8;
+}
+.dark-mode-hinweis{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background-image: var(--background-image) ;
+    backdrop-filter: blur(var(--blur));
+    padding: 5px;
+    color: var(--font-color);
+    border-radius: 0px 15px 0px 0px;
+    display: none;
 }
 
 /*Songs*/
 
 .song-einzeln{
-    background-image: linear-gradient(to right bottom,rgba(255, 255, 255, 0.29), rgba(255, 255, 255, 0.4)) ;
+    background-image: var(--background-image);
     border-radius: 40px;
     padding: 25px;
     position: relative;
     height: 140px;
     width: 450px;
     margin-bottom: 25px;
-    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.25);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(var(--blur));
 }
 .song-einzeln img{
     width: 140px;
@@ -111,22 +156,25 @@ body{
     border-radius: 30px;
 }
 .song-einzeln h3{
-    color: white;
+    color: var(--font-color-box);
     font-size: 25px;
-    font-family: 'Raleway', sans-serif;
     margin-bottom: 20px;
 }
 .song-einzeln audio{
     margin-top: 16.5px;
     border-radius: 30px;
+    width: 300px;
+    height: 54px;
 }
 .song-einzeln audio:focus{
     outline: none;
 }
+audio::-webkit-media-controls-panel{
+    background-color: initial;
+}
 .youtube, .soundcloud{
-    color: white;
+    color: var(--font-color-box);
     font-size: 18px;
-    font-family: 'Raleway', sans-serif;
     text-decoration: none;
     margin-right: 30px;
 }
@@ -152,7 +200,7 @@ body{
     flex-wrap: wrap;
 }
 .dienst-einzeln{
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: var(--background-color);
     border-radius: 40px;
     padding: 15px;
     position: relative;
@@ -160,11 +208,12 @@ body{
     margin-bottom: 25px;
     margin-left: 5px;
     margin-right: 5px;
-    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.25);
+    box-shadow: var(--shadow);
     transition: background-color 0.2s;
+    backdrop-filter: blur(var(--blur));
 }
 .dienst-einzeln:hover{
-    background-color: rgba(255, 255, 255, 0.38);
+    background-color: var(--background-color-hover);
 }
 .dienst-einzeln img{
     height: 20vh;
@@ -176,19 +225,19 @@ body{
     width: 90vw;
 }
 .entstehung-absatz{
-    color: white;
+    color: var(--font-color-box);
     font-size: 20px;
-    font-family: 'Raleway', sans-serif;
-    background-color: rgba(255, 255, 255, 0.29);
+    background-image: var(--background-image);
     border-radius: 40px;
     padding: 15px;
     width: 85vw;
     margin-bottom: 25px;
-    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.25);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(var(--blur));
 }
 
 .tool-einzeln{
-    background-color: rgba(255, 255, 255, 0.29);
+    background-image: var(--background-image);
     border-radius: 40px;
     width: 85vw;
     display: flex;
@@ -197,24 +246,23 @@ body{
     padding-left: 15px;
     padding-right: 15px;
     flex-wrap: wrap;
-    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.25);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(var(--blur));
 }
 .tool-einzeln h3{
-    color: white;
+    color: var(--font-color-box);
     font-size: 25px;
-    font-family: 'Raleway', sans-serif;
     text-decoration: none;
 }
 .tool-einzeln a{
     text-decoration: none;
 }
 .tool-einzeln h3:hover{
-    text-decoration: underline solid white;
+    text-decoration: underline solid var(--font-color-box);
 }
 .tool-einzeln p{
-    color: white;
+    color: var(--font-color-box);
     font-size: 20px;
-    font-family: 'Raleway', sans-serif;
 }
 .tool-einzeln img{
     width: 300px;
@@ -240,8 +288,6 @@ body{
     .song-einzeln audio{
         position: relative;
         bottom: -208px;
-        width: 300px;
-        height: 54px;
     }
     .song-einzeln img{
         left: 50%;
@@ -251,5 +297,61 @@ body{
     }
     .youtube, .soundcloud{
         display: none;
+    }
+}
+/*only Firefox*/
+@-moz-document url-prefix(){
+    :root{
+        --blur: 0px;
+    }
+    .song-einzeln, .dienst-einzeln, .entstehung-absatz, .tool-einzeln{
+        backdrop-filter: none;
+    }
+    .song-einzeln audio{
+        height: 40px;
+        margin-top: 30.5px;
+        filter: invert(1);
+    }
+    .splash{
+        position: absolute;
+    }
+}
+/*Darkmode*/
+@media (prefers-color-scheme: dark){
+    :root{
+        --font-color:rgb(218, 218, 218);
+    }
+    body{
+        background-image: linear-gradient(#00a594, #062235);
+    }
+    .title button:hover{
+        border: 3px solid rgba(34, 34, 34, 0.658);
+    }
+    .splash{
+        filter: brightness(75%);
+    }
+    .footer img{
+        filter: brightness(75%);
+    }
+    .dark-mode-hinweis{
+        display: block;
+        animation: verschwinden 2s ease-in-out forwards 7s;
+    }
+    .tool-einzeln img{
+        filter: brightness(15%);
+    }
+    /*audio::-webkit-media-controls-panel{
+        background-color: var(--font-color);
+    }*/
+    .song-einzeln audio{
+        filter: invert(1);
+    }
+}
+@keyframes verschwinden {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
     }
 }
